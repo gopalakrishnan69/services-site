@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repairit - Premium Device Repair Services | Chennai</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Chennai's #1 device repair service. Expert iPhone, smartphone, laptop & tablet repairs with 1-year warranty. Same-day service available.">
+    <meta name="keywords" content="mobile repair chennai, iPhone repair, laptop service, tablet repair, device repair">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Repairit - Premium Device Repair Services">
+    <meta property="og:description" content="Expert device repairs with warranty. Trusted by 5000+ customers in Chennai.">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="assets/css/components.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Repairit</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="/" class="logo">
+                    <i class="fas fa-tools"></i>
+                    <span>Repairit</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="tel:+919632054321" class="btn btn-primary btn-sm">
+                        <i class="fas fa-phone"></i>
+                        <span>Call Now</span>
+                    </a>
+                </div>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Trusted by 5000+ Customers</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="gradient-text">Premium Device Repair</span>
+                    Services in Chennai
+                </h1>
+                
+                <p class="hero-description">
+                    Expert repairs for iPhones, smartphones, laptops, and tablets. 
+                    Same-day service with 1-year warranty and free pickup/drop.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number" data-count="5000">0+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">Hours Support</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="99">0%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="tel:+919632054321" class="btn btn-primary btn-lg btn-glow">
+                        <i class="fas fa-phone"></i>
+                        Get Instant Quote
+                    </a>
+                    <a href="#services" class="btn btn-outline btn-lg">
+                        <i class="fas fa-tools"></i>
+                        View Services
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="device-showcase">
+                    <img src="assets/images/device-showcase.png" alt="Device Repair" loading="lazy">
+                </div>
+                
+                <div class="floating-badges">
+                    <div class="badge badge-primary">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>1-Year Warranty</span>
+                    </div>
+                    <div class="badge badge-accent">
+                        <i class="fas fa-bolt"></i>
+                        <span>Same Day Service</span>
+                    </div>
+                    <div class="badge badge-secondary">
+                        <i class="fas fa-home"></i>
+                        <span>Free Pickup/Drop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Our Services</div>
+                <h2 class="section-title">
+                    Expert <span class="gradient-text">Repair Solutions</span>
+                </h2>
+                <p class="section-description">
+                    Professional device repair services with certified technicians and genuine parts
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-service="iphone">
+                    <div class="service-icon">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <h3 class="service-title">iPhone Repair</h3>
+                    <p class="service-description">
+                        Screen replacement, battery issues, water damage repair for all iPhone models.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Genuine Parts</li>
+                        <li><i class="fas fa-check"></i> Same Day Service</li>
+                        <li><i class="fas fa-check"></i> 1-Year Warranty</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">
+                        Get Quote <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card featured" data-service="laptop">
+                    <div class="service-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 class="service-title">Laptop Repair</h3>
+                    <p class="service-description">
+                        Complete laptop repair services for all brands and models.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Hardware Repair</li>
+                        <li><i class="fas fa-check"></i> Software Issues</li>
+                        <li><i class="fas fa-check"></i> Data Recovery</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">
+                        Get Quote <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card" data-service="android">
+                    <div class="service-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h3 class="service-title">Android Repair</h3>
+                    <p class="service-description">
+                        Expert smartphone repairs for all Android brands and models.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Screen Replacement</li>
+                        <li><i class="fas fa-check"></i> Battery Issues</li>
+                        <li><i class="fas fa-check"></i> Water Damage</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">
+                        Get Quote <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card" data-service="tablet">
+                    <div class="service-icon">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <h3 class="service-title">Tablet Repair</h3>
+                    <p class="service-description">
+                        Professional iPad and Android tablet repairs with warranty.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> All Models</li>
+                        <li><i class="fas fa-check"></i> Quick Service</li>
+                        <li><i class="fas fa-check"></i> Quality Parts</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">
+                        Get Quote <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Why Choose Us</div>
+                <h2 class="section-title">
+                    Experience <span class="gradient-text">The Difference</span>
+                </h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Certified Experts</h3>
+                    <p>Our technicians are certified and trained with years of experience.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>1-Year Warranty</h3>
+                    <p>All repairs come with comprehensive 1-year warranty for peace of mind.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Same Day Service</h3>
+                    <p>Most repairs completed within hours with free pickup and drop service.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Genuine Parts</h3>
+                    <p>We use only original and high-quality replacement parts for all repairs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="section-header">
+                    <div class="section-badge">About Us</div>
+                    <h2 class="section-title">
+                        Chennai's <span class="gradient-text">Trusted Repair</span> Partner
+                    </h2>
+                    <p class="section-description">
+                        With over 10 years of experience and 5000+ satisfied customers, 
+                        we've established ourselves as Chennai's leading device repair service.
+                    </p>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number" data-count="10">0+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="5000">0+</div>
+                        <div class="stat-label">Devices Repaired</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="98">0%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                </div>
+                
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>State-of-the-art repair facility</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Advanced diagnostic equipment</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Certified technicians</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Transparent pricing</span>
+                    </div>
+                </div>
+                
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-comments"></i>
+                    Contact Us
+                </a>
+            </div>
+            
+            <div class="about-visual">
+                <div class="experience-badge">
+                    <div class="years">10+</div>
+                    <div class="text">Years Excellence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Customer Reviews</div>
+                <h2 class="section-title">
+                    What Our <span class="gradient-text">Customers Say</span>
+                </h2>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Excellent service! Fixed my water-damaged iPhone in just 2 hours. 
+                        Professional and transparent pricing. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Rajesh Kumar</h4>
+                            <p>iPhone User</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "My laptop wouldn't turn on. They diagnosed and repaired it same day. 
+                        Professional service with 1-year warranty. Amazing work!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Laptop User</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Quick screen replacement for my Samsung phone. Free pickup and drop service 
+                        made it very convenient. Will definitely recommend!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Anbalagan</h4>
+                            <p>Smartphone User</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="section-header">
+                    <div class="section-badge">Get in Touch</div>
+                    <h2 class="section-title">
+                        Contact <span class="gradient-text">Repairit</span>
+                    </h2>
+                    <p class="section-description">
+                        Get free diagnosis and quote from our expert technicians
+                    </p>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Our Location</h4>
+                            <p>4F, Block 4, Vaikund Gowardhan Apartment, 1, KK Salai, Sholinganallur, Chennai - 600119</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Phone Number</h4>
+                            <p><a href="tel:+919632054321">+91 9632054321</a></p>
+                            <p><a href="tel:+919632054321">+91 9632054321</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email Address</h4>
+                            <p><a href="mailto:info@repairit.co.in">info@repairit.co.in</a></p>
+                            <p><a href="mailto:support@repairit.co.in">support@repairit.co.in</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Working Hours</h4>
+                            <p>Monday - Sunday: 9:30 AM - 9:30 PM</p>
+                            <small>Emergency services available</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form id="enquiryForm">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" class="form-input" placeholder="Phone Number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select class="form-select" required>
+                            <option value="">Select Device Type</option>
+                            <option value="iphone">iPhone</option>
+                            <option value="android">Android Phone</option>
+                            <option value="laptop">Laptop</option>
+                            <option value="tablet">Tablet</option>
+                            <option value="other">Other Device</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea class="form-textarea" placeholder="Describe the issue..." rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i>
+                        Submit Enquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <i class="fas fa-tools"></i>
+                        <span>Repairit</span>
+                    </a>
+                    <p>Chennai's premier device repair service center. Expert repairs with warranty and same-day service.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">iPhone Repair</a></li>
+                        <li><a href="#">Laptop Repair</a></li>
+                        <li><a href="#">Smartphone Repair</a></li>
+                        <li><a href="#">Tablet Repair</a></li>
+                        <li><a href="#">Data Recovery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Sholinganallur, Chennai</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 9632054321</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@repairit.co.in</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Repairit. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Actions -->
+    <div class="floating-actions">
+        <a href="https://wa.me/+919632054321" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <a href="tel:+919632054321" class="call-float" aria-label="Call Now">
+            <i class="fas fa-phone"></i>
+        </a>
+        
+        <a href="#home" class="back-to-top" aria-label="Back to Top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/form-handler.js"></script>
+</body>
+</html>
