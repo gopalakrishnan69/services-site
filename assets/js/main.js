@@ -30,30 +30,43 @@ class RepairitApp {
     }
 
     // Navigation
-    initNavigation() {
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
-        const navLinks = document.querySelectorAll('.nav-link');
+// In the initNavigation method, update navLinks selector:
+initNavigation() {
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-        // Toggle mobile menu
-        navToggle.addEventListener('click', () => {
-            navToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            document.body.classList.toggle('nav-open');
+    // Toggle mobile menu
+    navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        document.body.classList.toggle('nav-open');
+    });
+
+    // Close menu on link click
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('nav-open');
+            
+            // Smooth scroll to section
+            const targetId = link.getAttribute('href');
+            if (targetId.startsWith('#')) {
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            }
         });
+    });
 
-        // Close menu on link click
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.classList.remove('nav-open');
-            });
-        });
-
-        // Update active nav link on scroll
-        window.addEventListener('scroll', this.updateActiveNavLink);
-    }
+    // Update active nav link on scroll
+    window.addEventListener('scroll', this.updateActiveNavLink);
+}
 
     updateActiveNavLink() {
         const sections = document.querySelectorAll('section[id]');

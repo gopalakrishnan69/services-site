@@ -244,3 +244,37 @@ document.addEventListener('DOMContentLoaded', () => {
         new FormHandler('enquiryForm');
     }
 });
+
+// In the validateField method, add email validation:
+validateField(field) {
+    const value = field.value.trim();
+    let isValid = true;
+    let errorMessage = '';
+
+    switch (field.type) {
+        case 'tel':
+            isValid = /^[0-9]{10}$/.test(value);
+            errorMessage = 'Please enter a valid 10-digit phone number';
+            break;
+        case 'email':
+            isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+            errorMessage = 'Please enter a valid email address';
+            break;
+        case 'text':
+            isValid = value.length >= 2;
+            errorMessage = 'Please enter at least 2 characters';
+            break;
+        case 'select-one':
+            isValid = value !== '';
+            errorMessage = 'Please select an option';
+            break;
+    }
+
+    if (!isValid && field.required) {
+        this.showFieldError(field, errorMessage);
+        return false;
+    }
+
+    this.clearError(field);
+    return true;
+}
