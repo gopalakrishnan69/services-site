@@ -7,13 +7,13 @@
 
 :root {
     /* Color System */
-    --primary: #6366f1;
-    --primary-dark: #4f46e5;
-    --primary-light: #818cf8;
+    --primary: #1a56db;
+    --primary-dark: #1e40af;
+    --primary-light: #3b82f6;
     
-    --secondary: #ec4899;
-    --secondary-dark: #db2777;
-    --secondary-light: #f472b6;
+    --secondary: #dc2626;
+    --secondary-dark: #b91c1c;
+    --secondary-light: #ef4444;
     
     --accent: #f59e0b;
     --accent-dark: #d97706;
@@ -23,14 +23,14 @@
     --success-dark: #059669;
     --success-light: #34d399;
     
-    --dark: #0f172a;
-    --darker: #020617;
-    --light: #f8fafc;
+    --dark: #111827;
+    --darker: #030712;
+    --light: #f9fafb;
     --lighter: #ffffff;
     
-    --text-dark: #1e293b;
-    --text-light: #64748b;
-    --text-lighter: #94a3b8;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --text-lighter: #9ca3af;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -38,17 +38,17 @@
     --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
     
     /* Shadows */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
     
     /* Border Radius */
-    --radius-sm: 0.5rem;
-    --radius-md: 0.75rem;
-    --radius-lg: 1rem;
-    --radius-xl: 1.5rem;
-    --radius-full: 9999px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 20px;
+    --radius-full: 50px;
     
     /* Spacing */
     --space-xs: 0.5rem;
@@ -61,17 +61,12 @@
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-heading: 'Poppins', sans-serif;
-    
-    /* Transitions */
-    --transition-fast: 150ms ease;
-    --transition-base: 300ms ease;
-    --transition-slow: 500ms ease;
 }
 
 /* Base Styles */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -100,12 +95,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 800;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
 }
 
 h3 {
@@ -115,12 +110,12 @@ h3 {
 p {
     margin-bottom: var(--space-md);
     color: var(--text-light);
+    line-height: 1.7;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    transition: color var(--transition-base);
 }
 
 ul {
