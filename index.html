@@ -11,7 +11,7 @@
     <meta name="author" content="LapDoc">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="LapDoc - Premium Laptop & Device Repair Services">
+    <meta property="og:title" content="LapDoc - Premium Laptop Sales & Repair Services">
     <meta property="og:description" content="Expert device repairs with warranty. Trusted Laptop repair service in Chennai.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lapdoc.co.in">
@@ -88,18 +88,18 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="gradient-text">Premium Laptop & Device</span>
-                    <span class="hero-subtitle">Repair Services in Chennai</span>
+                    <span class="gradient-text">Premium Laptop Sales & Repair Services</span>
+<!--                    <span class="hero-subtitle">Repair Services in Chennai</span> -->
                 </h1>
                 
                 <p class="hero-description">
-                    Expert repairs for Laptops, iPhones, Smartphones, and Tablets. 
-                    Same-day service with 1-year warranty and free pickup/drop.
+                    Expert Laptop Repair Services You Can Trust.
+                    Professional Laptop Repair Solutions for All Brands.
                 </p>
                 
                 <div class="hero-stats">
                     <div class="stat">
-                        <div class="stat-number" data-count="5000">5000+</div>
+                        <div class="stat-number" data-count="500">500+</div>
                         <div class="stat-label">Happy Customers</div>
                     </div>
                     <div class="stat">
@@ -154,6 +154,7 @@
             </div>
             
             <div class="services-grid">
+
                 <div class="service-card featured" data-service="Laptop">
                     <div class="service-badge">Most Popular</div>
                     <div class="service-icon">
@@ -172,7 +173,7 @@
                         Get Quote <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-                
+                 <!--
                 <div class="service-card" data-service="iphone">
                     <div class="service-icon">
                         <i class="fab fa-apple"></i>
@@ -208,7 +209,7 @@
                         Get Quote <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-                
+               
                 <div class="service-card" data-service="Tablet">
                     <div class="service-icon">
                         <i class="fas fa-tablet-alt"></i>
@@ -226,6 +227,7 @@
                         Get Quote <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
+                -->
             </div>
         </div>
     </section>
@@ -581,19 +583,25 @@
             </div>
             
             <div class="contact-form">
-                <form id="enquiryForm">
+                <form id="my-form" action="https://formspree.io/f/meejbkbl" method="POST">
                     <div class="form-group">
-                        <input type="text" class="form-input" placeholder="Your Name" required>
+                        <input type="text" name="name" class="form-input" id="name" placeholder="Your Name" required>
                     </div>
                     
                     <div class="form-group">
-                        <input type="tel" class="form-input" placeholder="Phone Number" required>
+                        <input type="tel" name="phone" class="form-input" id="phone" placeholder="Phone Number" required>
                     </div>
                     
                     <div class="form-group">
-                        <input type="email" class="form-input" placeholder="Email Address" required>
+                        <input type="email" name="email" class="form-input" id="email" placeholder="Email Address" required>
                     </div>
+
+                    <div class="form-group">
+                        <input type="subject" name="subject" class="form-input" id="subject" placeholder="Enter your Subjct" required>
+                    </div>
+
                     
+                    <!-- 
                     <div class="form-group">
                         <select class="form-select" required>
                             <option value="">Select Service Required</option>
@@ -605,15 +613,19 @@
                             <option value="other">Other Service</option>
                         </select>
                     </div>
-                    
+                    -->
+
                     <div class="form-group">
-                        <textarea class="form-textarea" placeholder="Describe the issue or enquiry..." rows="4" required></textarea>    
+                        <textarea class="form-textarea" name="message" id="message" placeholder="Describe the issue or enquiry..." rows="4" required></textarea>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary btn-block">
+                    <button type="submit" id="my-form-button" class="btn btn-primary btn-block">
                         <i class="fas fa-paper-plane"></i>
                         Submit Enquiry
                     </button>
+                    <p id="my-form-status"></p>
+                            
+
                 </form>
             </div>
         </div>
@@ -661,10 +673,13 @@
                     <h3>Our Services</h3>
                     <ul>
                         <li><a href="#services">Laptop Repair</a></li>
-                        <li><a href="#services">iPhone Repair</a></li>
-                        <li><a href="#services">Smartphone Repair</a></li>
-                        <li><a href="#services">Tablet Repair</a></li>
                         <li><a href="#products">Refurbished Laptops</a></li>
+
+                        <li>iPhone Repair</li>
+                        <li>Smartphone Repair</li>
+                        <li>Tablet Repair</li>
+                        
+
                     </ul>
                 </div>
                 
@@ -713,5 +728,56 @@
     <!-- Scripts -->
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/form-handler.js" defer></script>
+
+
 </body>
+
+<script>
+
+    window.addEventListener("DOMContentLoaded", function() {
+  
+    // get the form elements defined in your form HTML above
+    var form = document.getElementById("my-form");
+    var button = document.getElementById("my-form-button");
+    var status = document.getElementById("my-form-status");
+  
+    // Success and Error functions for after the form is submitted
+    function success() {
+        form.reset();
+        button.style = "display: none ";
+        status.innerHTML = "Thanks!";
+    }
+  
+    function error() {
+        status.innerHTML = "Oops! There was a problem.";
+    }
+  
+    // handle the form submission event
+    form.addEventListener("submit", function(ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+      });
+    });
+    
+    // helper function for sending an AJAX request
+    function ajax(method, url, data, success, error) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            
+            if (xhr.status === 200) {
+                success(xhr.response, xhr.responseType);
+            } else {
+                error(xhr.status, xhr.response, xhr.responseType);
+            }
+      };
+      xhr.send(data);
+    }
+
+</script>
+
+
 </html>
